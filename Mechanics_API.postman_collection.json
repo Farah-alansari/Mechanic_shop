@@ -1,0 +1,664 @@
+{
+  "info": {
+    "_postman_id": "3c51a74f-755d-4860-b6cd-b8d435811a6b",
+    "name": "Mechanics_API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52543107",
+    "_collection_link": "https://go.postman.co/collection/52543107-3c51a74f-755d-4860-b6cd-b8d435811a6b?source=collection_link"
+  },
+  "item": [
+    {
+      "name": " http://127.0.0.1:5000/mechanics/1",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Ali updated\",\r\n\t\t\"email\": \"ali@outlook.com\",\r\n    \"phone\": \"1234567\",\r\n    \"salary\": 6000\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/mechanics/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "mechanics",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": " http://127.0.0.1:5000/mechanics/1",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"Mohammad\",\r\n    \"email\":\"moh@outlook.com\",\r\n    \"phone\":\"123498764\",\r\n    \"salary\":5500\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/mechanics/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "mechanics",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": " http://127.0.0.1:5000/mechanics/1",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"Mohammad\",\r\n    \"email\":\"moh@outlook.com\",\r\n    \"phone\":\"123498764\",\r\n    \"salary\":5500\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/mechanics/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "mechanics",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": " http://127.0.0.1:5000/mechanics/1",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"Mohammad\",\r\n    \"email\":\"moh@outlook.com\",\r\n    \"phone\":\"123498764\",\r\n    \"salary\":5500\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/mechanics/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "mechanics",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": " http://127.0.0.1:5000/mechanics/1",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Ali updated\",\r\n\t\t\"email\": \"ali@outlook.com\",\r\n    \"phone\": \"1234567\",\r\n    \"salary\": 6000\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/mechanics/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "mechanics",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": " http://127.0.0.1:5000/mechanics/1",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Ali updated\",\r\n\t\t\"email\": \"ali@outlook.com\",\r\n    \"phone\": \"1234567\",\r\n    \"salary\": 6000\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/mechanics/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "mechanics",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": " http://127.0.0.1:5000/customers",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"Fadi\",\r\n    \"email\":\"f@hotmail.com\",\r\n    \"phone\":\"0799666999\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/customers",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "customers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": " http://127.0.0.1:5000/customers",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"Fadi updated\",\r\n    \"email\":\"f2@hotmail.com\",\r\n    \"phone\":\"0799666999\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/customers/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "customers",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": " http://127.0.0.1:5000/customers",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"Fadi updated\",\r\n    \"email\":\"f2@hotmail.com\",\r\n    \"phone\":\"0799666999\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/customers/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "customers",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": " http://127.0.0.1:5000/customers",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"Fadi updated\",\r\n    \"email\":\"f2@hotmail.com\",\r\n    \"phone\":\"0799666999\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/customers/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "customers",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": " http://127.0.0.1:5000/customers",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"Fadi updated\",\r\n    \"email\":\"f2@hotmail.com\",\r\n    \"phone\":\"0799666999\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/customers/2",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "customers",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": " http://127.0.0.1:5000/customers",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"Fadi updated\",\r\n    \"email\":\"f2@hotmail.com\",\r\n    \"phone\":\"0799666999\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/tickets",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "tickets"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": " http://127.0.0.1:5000/customers",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"description\":\"Motor make noise\",\r\n    \"customer_id\":1,\r\n    \"service_date\":\"2026-03-07\",\r\n    \"vin\":\"556677\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/tickets",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "tickets"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": " http://127.0.0.1:5000/tickets/",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"description\": \"Motor make noise\",\r\n    \"service_date\": \"2026-03-07\",\r\n    \"vin\": \"556677\",\r\n    \"customer_id\":1\r\n    \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/tickets/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "tickets",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": " http://127.0.0.1:5000/tickets/",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"description\": \"Motor make noise\",\r\n    \"service_date\": \"2026-03-07\",\r\n    \"vin\": \"5566778\",\r\n    \"customer_id\":1\r\n    \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/tickets/1/assign-mechanic/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "tickets",
+            "1",
+            "assign-mechanic",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": " http://127.0.0.1:5000/tickets/",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"description\": \"Motor make noise\",\r\n    \"service_date\": \"2026-03-07\",\r\n    \"vin\": \"5566778\",\r\n    \"customer_id\":1\r\n    \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/tickets/1/remove-mechanic/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "tickets",
+            "1",
+            "remove-mechanic",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": " http://127.0.0.1:5000/tickets/",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/tickets/1/remove-mechanic/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "tickets",
+            "1",
+            "remove-mechanic",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": " http://127.0.0.1:5000/tickets/",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/tickets/1/assign-mechanic/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "tickets",
+            "1",
+            "assign-mechanic",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
