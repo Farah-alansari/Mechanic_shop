@@ -2,7 +2,7 @@
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 from sqlalchemy import ForeignKey
-from .extensions import db
+
 # ======================
 # Base
 # ======================
@@ -27,6 +27,26 @@ class ServiceMechanics(Base):
         primary_key=True
     )
 
+
+# ======================
+# Bridge Table 
+# ======================
+class TicketInventory(Base):
+    __tablename__ = "ticket_inventory"
+
+    ticket_id: Mapped[int] = mapped_column(
+        ForeignKey("service_tickets.id"),
+        primary_key=True
+    )
+
+    inventory_id: Mapped[int] = mapped_column(
+        ForeignKey("inventory.id"),
+        primary_key=True
+    )
+    
+    quantity:Mapped[int]=mapped_column(nullable=False)
+    ticket=relationship("ServiceTickets", back_populates="ticket_inventory")
+    inventory=relationship("Inventory", back_populates="ticket_inventory") 
 # ======================
 # Customers
 # ======================
@@ -37,6 +57,7 @@ class Customers(Base):
     name: Mapped[str] = mapped_column(db.String(255), nullable=False)
     email: Mapped[str] = mapped_column(db.String(255), nullable=False, unique=True)
     phone: Mapped[str] = mapped_column(db.String(50), nullable=False)
+    password:Mapped[str]= mapped_column(db.String(255),nullable=False)
 
     service_tickets = relationship(
         "ServiceTickets",
@@ -87,4 +108,35 @@ class ServiceTickets(Base):
         secondary="service_mechanics",
         back_populates="tickets"
     )
+    
+    inventory = relationship(
+        "Inventory",
+        secondary="ticket_inventory",
+        back_populates="tickets"
+    )
 
+    ticket_inventory=relationship(
+        "TicketInventory",
+        back_populates="ticket"
+    )
+# ======================
+# Inventory
+# ======================
+
+class Inventory(Base):
+    __tablename__ = "inventory"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(db.String(255), nullable=False)
+    price: Mapped[float] = mapped_column(nullable=False)
+    
+    tickets= relationship(
+        "ServiceTickets",
+        secondary="ticket_inventory",
+        back_populates="inventory"
+    )
+    
+    ticket_inventory=relationship(
+        "TicketInventory",
+        back_populates="inventory"
+    )

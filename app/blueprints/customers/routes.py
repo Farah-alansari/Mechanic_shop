@@ -1,10 +1,11 @@
 from flask import request, jsonify
-from app.extensions import db
+from app.models import db
 from app.models import Customers
 from . import customers_bp
-from .schemas import customer_schema, customers_schema
+from .schemas import customer_schema, customers_schema, login_schema
 from marshmallow import ValidationError
 from sqlalchemy import select
+from app.utils.util import encode_token, token_required
 
 
 ##POST
@@ -25,13 +26,38 @@ def add_customer():
     db.session.commit()
     return customer_schema.jsonify(new_customer), 201
 
-##GET
-@customers_bp.route("/", methods=["GET"])
-def get_customers():
-    query = select(Customers)
-    customers = db.session.execute(query).scalars().all()
+@customers_bp.route("/login", methods=['POST'])
+def login():
+    try:
+        credentials = request.json
+        email = credentials['email']
+        # password = credentials['password']
+     
+    except KeyError:
+        return jsonify({'messages': 'Invalid payload, expecting email'}), 400
+    
+    query =select(Customers).where(Customers.email == email) 
+    customer = db.session.execute(query).scalar_one_or_none() 
 
-    return customers_schema.jsonify(customers)
+    if customer :
+        auth_token = encode_token(customer.id)
+
+        response = {
+            "status": "success",
+            "message": "Successfully Logged In",
+            "auth_token": auth_token
+        }
+        return jsonify(response), 200
+    else:
+        return jsonify({'messages': "Invalid email"}), 401
+
+##GET
+# @customers_bp.route("/", methods=["GET"])
+# def get_customers():
+#     query = select(Customers)
+#     customers = db.session.execute(query).scalars().all()
+
+#     return customers_schema.jsonify(customers)
 
 
 @customers_bp.route("/<int:customer_id>", methods=['GET'])
@@ -75,3 +101,25 @@ def delete_customer(customer_id):
     db.session.delete(customer)
     db.session.commit()
     return jsonify({"message": f'Customer id: {customer_id}, successfully deleted.'}), 200
+
+
+@customers_bp.route("/", methods=["GET"])
+def get_customers():
+
+    try:
+        page = int(request.args.get("page"))
+        per_page = int(request.args.get("per_page"))
+
+        query = select(Customers)
+
+        customers = db.paginate(query, page=page, per_page=per_page)
+
+        return customers_schema.jsonify(customers.items), 200
+
+    except:
+        query = select(Customers)
+
+        customers = db.session.execute(query).scalars().all()
+
+        return customers_schema.jsonify(customers), 200
+      

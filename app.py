@@ -1,13 +1,12 @@
+
 from app import create_app
-from app.extensions import db
+from app.models import db 
 
-
-app= create_app("DevelopmentConfig")
-
+app = create_app("DevelopmentConfig")
 
 with app.app_context():
-    db.create_all()
+  
+    db.create_all() 
 
 
-
-    app.run()
+app.run()

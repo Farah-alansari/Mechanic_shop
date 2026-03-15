@@ -1,32 +1,56 @@
-Mechanics Shop API
+# Mechanics Shop API
 
-# About the Project
+A REST API built using Flask for managing a mechanics shop system.
 
-This project is a Flask REST API for a mechanic shop. It manages mechanics, customers, and service tickets. The API allows creating tickets and assigning or removing mechanics.
+## Features
 
-# Technologies
+- Manage customers
+- Create and manage service tickets
+- Manage mechanics
+- Manage inventory items
+- Assign mechanics to tickets
 
-• Python
-• Flask
-• SQLAlchemy
-• Marshmallow
-• Postman
+## Technologies Used
 
-# Main Endpoints
+- Python
+- Flask
+- SQLAlchemy
+- Marshmallow
+- Postman (for API testing)
 
-• POST /mechanics – create mechanic
-• GET /mechanics – get all mechanics
-• PUT /mechanics/<id> – update mechanic
-• DELETE /mechanics/<id> – delete mechanic
-• POST /tickets – create ticket
-• GET /tickets – get all tickets
-• PUT /tickets/<ticket_id>/assign-mechanic/<mechanic_id>
-• PUT /tickets/<ticket_id>/remove-mechanic/<mechanic_id>
+## API Endpoints
 
-# Testing
+### Customers
 
-All endpoints were tested using Postman.
+- POST /customers
+- GET /customers
+- PUT /customers/<id>
+- DELETE /customers/<id>
+
+### Tickets
+
+- POST /tickets
+- GET /tickets
+- PUT /tickets/<id>
+- DELETE /tickets/<id>
+
+### Mechanics
+
+- POST /mechanics
+- PUT /mechanics/<id>
+- DELETE /mechanics/<id>
+
+### Inventory
+
+- POST /inventory
+- PUT /inventory/<id>
+- DELETE /inventory/<id>
+
+## Testing
+
+All endpoints were tested using Postman.  
+The Postman collection file is included in the project.
 
 ## Author
 
-Farah Al-Ansari
+Farah Alansari
