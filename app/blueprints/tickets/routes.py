@@ -66,7 +66,7 @@ def assign_mechanic(ticket_id, mechanic_id):
 @tickets_bp.route("/<int:ticket_id>", methods=["DELETE"])
 def delete_ticket(ticket_id):
 
-    ticket = db.session.get(Mechanics, ticket_id)
+    ticket = db.session.get(ServiceTickets, ticket_id)
 
     if not ticket:
         return jsonify({"error": "Ticket not found."}), 404

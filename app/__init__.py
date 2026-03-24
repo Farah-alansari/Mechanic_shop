@@ -5,7 +5,20 @@ from .blueprints.customers import customers_bp
 from .blueprints.mechanics import mechanics_bp
 from .blueprints.tickets import tickets_bp
 from .blueprints.inventory import inventory_bp
+from flask_swagger_ui import get_swaggerui_blueprint
+from flasgger import Swagger
 
+
+SWAGGER_URL = '/api/docs'  
+API_URL = '/static/swagger.yaml'  
+
+swaggerui_blueprint = get_swaggerui_blueprint(
+    SWAGGER_URL,
+    API_URL,
+    config={
+        'app_name': "Your API's Name"
+    }
+)
 def create_app(config_name):
     app = Flask(__name__)
     app.config.from_object(f'config.{config_name}')
@@ -21,5 +34,6 @@ def create_app(config_name):
     app.register_blueprint(mechanics_bp,url_prefix='/mechanics')
     app.register_blueprint(tickets_bp,url_prefix='/tickets')
     app.register_blueprint(inventory_bp,url_prefix='/inventory')
+    app.register_blueprint(swaggerui_blueprint, url_prefix=SWAGGER_URL) 
     
     return app

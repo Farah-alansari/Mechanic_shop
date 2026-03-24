@@ -28,7 +28,7 @@ def get_parts():
     query = select(Inventory)
     parts = db.session.execute(query).scalars().all()
 
-    return inventory_schema.jsonify(parts)
+    return inventories_schema.jsonify(parts)
 
 
 #Get one part
