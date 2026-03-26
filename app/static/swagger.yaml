@@ -5,10 +5,10 @@ info:
   description: "This is an API to manage a mechanic shop"
   version: "1.0.0"
 
-host: "127.0.0.1:5000"
+host: "mechanic-shop-j8r9.onrender.com"
 
 schemes:
-  - "http"
+  - "https"
 
 consumes:
   - "application/json"
